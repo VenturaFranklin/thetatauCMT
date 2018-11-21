@@ -1,0 +1,5 @@
+openssl x509 -enddate -noout -in ~/letsencrypt/cmt.thetatau.org/cert.pem
+
+https://github.com/worthwhile/django-herald
+
+https://django-wiki.readthedocs.io/en/latest/installation.html

@@ -79,6 +79,19 @@ THIRD_PARTY_APPS = [
     'django_filters',
     'bootstrap4',
     'django_extensions',  # https://github.com/pydanny/cookiecutter-django/issues/417
+    'django.contrib.humanize.apps.HumanizeConfig',
+    'django_nyt.apps.DjangoNytConfig',
+    'mptt',
+    'sekizai',
+    'sorl.thumbnail',
+    'wiki.apps.WikiConfig',
+    'wiki.plugins.attachments.apps.AttachmentsConfig',
+    'wiki.plugins.globalhistory.apps.GlobalHistoryConfig',
+    'wiki.plugins.help.apps.HelpConfig',
+    'wiki.plugins.links.apps.LinksConfig',
+    'wiki.plugins.notifications.apps.NotificationsConfig',
+    'wiki.plugins.images.apps.ImagesConfig',
+    'wiki.plugins.macros.apps.MacrosConfig',
 ]
 LOCAL_APPS = [
     'thetatauCMT.users.apps.UsersConfig',
@@ -208,6 +221,7 @@ TEMPLATES = [
                 'django.template.context_processors.static',
                 'django.template.context_processors.tz',
                 'django.contrib.messages.context_processors.messages',
+                "sekizai.context_processors.sekizai",
             ],
         },
     },
@@ -272,6 +286,8 @@ SOCIALACCOUNT_ADAPTER = 'users.adapters.SocialAccountAdapter'
 
 # Your stuff...
 # ------------------------------------------------------------------------------
+WIKI_ACCOUNT_HANDLING = False
+
 ROLLBAR = {
     'access_token': env('ROLLBAR_ACCESS', default=''),
     'environment': 'development' if DEBUG else 'production',
