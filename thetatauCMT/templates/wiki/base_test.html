@@ -1,0 +1,24 @@
+{% extends "base.html" %}
+{% load sekizai_tags i18n wiki_tags static %}
+
+{% block title %}
+  {% block wiki_pagetitle %}{% endblock %}{% block wiki_site_title %} - django-\/\/  i K |{% endblock %}
+{% endblock %}
+
+{% block content %}
+  <!-- Le styles -->
+    <link href="{% static "wiki/bootstrap/css/wiki-bootstrap.min.css" %}" rel="stylesheet">
+  {% block wiki_body %}
+    {% wiki_messages %}
+    <!-- Reserved for breadcrumbs -->
+      {% block wiki_breadcrumbs %}{% endblock %}
+    <!-- Main page contents go here -->
+      {% block wiki_contents %}{% endblock %}
+  {% endblock %}
+{% endblock content %}
+<script src="{% static "wiki/js/jquery-3.3.1.min.js" %}"></script>
+<script src="{% static "wiki/js/core.js" %}"></script>
+<script src="{% static "wiki/bootstrap/js/bootstrap.min.js" %}"></script>
+<!-- Optionally enable responsive features in IE8 -->
+<script src="{% static "wiki/js/respond.min.js" %}"></script>
+{% render_block "js" %}
