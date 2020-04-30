@@ -49,7 +49,7 @@ django-herald==0.2.1  # https://github.com/worthwhile/django-herald
 django-viewflow==1.6.0  # http://docs.viewflow.io/
 django-material==1.6.3  #
 django-import-export==2.0.2  # https://django-import-export.readthedocs.io
-
+django-fobi==0.16.4  # https://django-fobi.readthedocs.io/en/latest/
 
 # Django REST Framework
 djangorestframework==3.11.0  # https://github.com/encode/django-rest-framework
